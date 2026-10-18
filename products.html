@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order espresso, cold brew, pour-over coffee, and fresh pastries from Grounded Coffee Co.">
+    <title>Coffee Menu | Grounded Coffee Co.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html"><span>Grounded</span><span class="logo-dot">.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="products.html">Coffee Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-banner">
+        <p class="eyebrow">FRESHLY MADE, JUST FOR YOU</p>
+        <h1>Find your <span>coffee.</span></h1>
+        <p>Pick your favorites, add them to your order, and choose pickup or delivery.</p>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <p class="eyebrow">THE GROUNDED MENU</p>
+            <h2>Made with good <span>things.</span></h2>
+            <p>All drinks can be made hot or iced. Prices are sample Philippine pesos for this project.</p>
+        </div>
+
+        <div class="order-layout">
+        <div class="product-grid">
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Honey oat iced latte">
+                <div class="product-info">
+                    <span class="tag">HOUSE FAVORITE</span>
+                    <h3>Honey Oat Latte</h3>
+                    <p>Double espresso, oat milk, and a drizzle of local honey.</p>
+                    <div class="product-bottom"><strong>₱175</strong><button class="add-button" type="button" data-item="Honey Oat Latte" data-price="175">Add to order +</button></div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Fresh pour-over coffee">
+                <div class="product-info">
+                    <span class="tag">SLOW BAR</span>
+                    <h3>Single-Origin Pour Over</h3>
+                    <p>Rotating seasonal beans with delicate floral, citrus notes.</p>
+                    <div class="product-bottom"><strong>₱160</strong><button class="add-button" type="button" data-item="Single-Origin Pour Over" data-price="160">Add to order +</button></div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" alt="Iced cold brew coffee">
+                <div class="product-info">
+                    <span class="tag">12-HOUR STEEP</span>
+                    <h3>Slow Steep Cold Brew</h3>
+                    <p>Chocolatey, smooth, and steeped low and slow overnight.</p>
+                    <div class="product-bottom"><strong>₱145</strong><button class="add-button" type="button" data-item="Slow Steep Cold Brew" data-price="145">Add to order +</button></div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80" alt="Cappuccino with latte art">
+                <div class="product-info">
+                    <span class="tag">CLASSIC</span>
+                    <h3>Flat White</h3>
+                    <p>Rich double espresso with velvety steamed milk.</p>
+                    <div class="product-bottom"><strong>₱155</strong><button class="add-button" type="button" data-item="Flat White" data-price="155">Add to order +</button></div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="Freshly baked butter croissant">
+                <div class="product-info">
+                    <span class="tag">BAKED FRESH</span>
+                    <h3>Butter Croissant</h3>
+                    <p>Golden, flaky layers with a soft buttery middle.</p>
+                    <div class="product-bottom"><strong>₱95</strong><button class="add-button" type="button" data-item="Butter Croissant" data-price="95">Add to order +</button></div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80" alt="Chocolate brownie with cocoa">
+                <div class="product-info">
+                    <span class="tag">SWEET TREAT</span>
+                    <h3>Dark Chocolate Brownie</h3>
+                    <p>Fudgy center, crisp edge, and plenty of dark chocolate.</p>
+                    <div class="product-bottom"><strong>₱85</strong><button class="add-button" type="button" data-item="Dark Chocolate Brownie" data-price="85">Add to order +</button></div>
+                </div>
+            </article>
+        </div>
+        <aside class="order-panel" aria-labelledby="orderTitle">
+            <p class="eyebrow">YOUR COFFEE RUN</p>
+            <h2 id="orderTitle">Your order</h2>
+            <p class="muted-text" id="emptyOrder">Add something delicious to get started.</p>
+            <ul class="order-items" id="orderItems" aria-live="polite"></ul>
+            <div class="order-total"><span>Total</span><span id="orderTotal">₱0</span></div>
+            <form id="orderForm">
+                <label for="orderName">Your name</label>
+                <input id="orderName" name="orderName" autocomplete="name" placeholder="Name for your order" required>
+                <label for="orderMethod">Pickup or delivery</label>
+                <select id="orderMethod" name="orderMethod" required>
+                    <option value="Pickup">Pickup</option>
+                    <option value="Delivery">Delivery</option>
+                </select>
+                <button class="btn btn-primary" type="submit">Place demo order</button>
+                <p class="order-status" id="orderStatus" role="status"></p>
+            </form>
+        </aside>
+        </div>
+    </section>
+
+    <section class="section section-muted">
+        <div class="section-heading">
+            <p class="eyebrow">BREW AT HOME</p>
+            <h2>Take the good stuff <span>with you.</span></h2>
+            <p>Ask us in-store about our rotating beans and home-brewing favorites.</p>
+        </div>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <div class="feature-icon">◉</div>
+                <h3>House Blend Beans</h3>
+                <p>Chocolate, toasted almond, and a smooth caramel finish.</p>
+                <strong>₱450 / 250 g</strong>
+            </article>
+            <article class="service-card">
+                <div class="feature-icon">✿</div>
+                <h3>Seasonal Single Origin</h3>
+                <p>Small-lot coffees from thoughtful growers, changing with the harvest.</p>
+                <strong>From ₱520 / 250 g</strong>
+            </article>
+            <article class="service-card">
+                <div class="feature-icon">⌁</div>
+                <h3>Brewing Gear</h3>
+                <p>Simple pour-over tools, filters, and friendly advice for your setup.</p>
+                <strong>Ask us in store</strong>
+            </article>
+        </div>
+        <p class="notice">Prices and menu items are sample details for this school project. The online order flow is a front-end demo and does not send orders or accept payment.</p>
+    </section>
+
+    <section class="cta-section">
+        <div>
+            <p class="eyebrow">PLANNING A GROUP ORDER?</p>
+            <h2>We can bring the coffee to you.</h2>
+            <p>Tell us about your gathering and we will help plan the coffee run.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Ask about catering ↗</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <a class="logo" href="index.html"><span>Grounded</span><span class="logo-dot">.</span></a>
+    <p>Good coffee, good company. A neighborhood café concept.</p>
+    <p>© 2026 Grounded Coffee Co.</p>
+</footer>
+<script src="order.js"></script>
+</body>
+</html>
